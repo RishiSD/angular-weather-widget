@@ -1,0 +1,38 @@
+
+    <mat-card class="card-container">
+      <mat-card-header>
+        <mat-card-title>{{City}}</mat-card-title>
+        <div [ngClass]="{
+                'circle_red' : Data.isError,
+                'circle_green' : !Data.isError}"></div>
+      </mat-card-header>
+      <mat-card-content class="weatherContent">
+        <div *ngIf="Data!.isDay">
+          <img src="/assets/icons/day.svg">
+        </div>
+        <div *ngIf="!Data!.isDay">
+          <img src="/assets/icons/night.svg">
+        </div>
+        <div *ngIf="Data.weather === CLOUDS" class="iconDiv">
+          <img src="/assets/icons/cloudy.svg">
+        </div>
+        <div *ngIf="Data.weather === DRIZZLE" class="iconDiv">
+          <img src="/assets/icons/drizzle.svg">
+        </div>
+        <div *ngIf="Data.weather === RAIN" class="iconDiv">
+          <img src="/assets/icons/rain.svg">
+        </div>
+        <div *ngIf="Data.weather === SNOW" class="iconDiv">
+          <img src="/assets/icons/snowy.svg">
+        </div>
+        <div *ngIf="Data.weather === THUNDERSTORM" class="iconDiv">
+          <img src="/assets/icons/thunder.svg">
+        </div>
+        <mat-card-subtitle>{{Data.weather}}</mat-card-subtitle>
+        <div style="font-size: 24px;margin-top: 5px;margin-bottom: 10px;">{{Data.temp}}°C</div>
+      </mat-card-content>
+      
+      <mat-card-content>
+        <div>Humidity : {{Data.humidity}}%</div>
+      </mat-card-content>
+    </mat-card>

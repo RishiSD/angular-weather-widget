@@ -1,0 +1,32 @@
+.card-container{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgb(163, 222, 250);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weatherContent{
+    display:block;
+    margin:0 auto;
+    width: fit-content;
+}
+
+.iconDiv{
+    margin-top: -50px;
+}
+
+.circle_green {
+    width: 10px;
+    height: 10px;
+    background: green;
+    border-radius: 50%
+  }
+
+.circle_red {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%
+  }
