@@ -22,6 +22,5 @@ export class WeatherCardComponent {
 
   constructor(private service: WeatherDataService, private sanitizer: DomSanitizer) {
     this.Data = service.getWeatherData();
-    console.log(this.Data);
   }
 }

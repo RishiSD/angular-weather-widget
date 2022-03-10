@@ -53,7 +53,6 @@ export class WeatherDataService {
             }
             apiData.isError = false
         });
-        console.log(apiData)
         return apiData
     }
 }
